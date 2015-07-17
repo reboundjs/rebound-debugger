@@ -1,0 +1,18 @@
+{
+  "name": "Rebound",
+  "manifest_version": 2,
+  "version": "0.0.2",
+  "description": "Rebound devtools debugger.",
+  "devtools_page": "rebound.html",
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content-script.js"],
+    "run_at": "document_start"
+  }],
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "alarms"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
