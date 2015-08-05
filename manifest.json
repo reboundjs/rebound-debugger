@@ -1,14 +1,19 @@
 {
-  "name": "Rebound",
+  "name": "Rebound Debugger",
   "manifest_version": 2,
-  "version": "0.0.2",
-  "description": "Rebound devtools debugger.",
+  "version": "0.0.3",
+  "description": "Rebound's Chrome Devtools Debugger",
   "devtools_page": "rebound.html",
   "content_scripts": [{
     "matches": ["<all_urls>"],
     "js": ["content-script.js"],
     "run_at": "document_start"
   }],
+  "icons": {
+    "16": "images/rebound16.png",
+    "48": "images/rebound48.png",
+    "128": "images/rebound128.png"
+  },
   "permissions": [
     "<all_urls>",
     "storage",
